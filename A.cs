@@ -4,11 +4,13 @@ namespace feature_envy_dotnet
 {
     class A
     {
-        public int x = 14;
-        public int y = 30;
+        public int field1;
+        public int field2;
         public int a() {
-            int a = 5;
-            return a * a;
+            int x;
+            int y = 2;
+            x = 1 + y;
+            return x;
         }
     }
 }

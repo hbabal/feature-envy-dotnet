@@ -4,44 +4,42 @@ namespace feature_envy_dotnet
 {
     class C
     {
-        public int c1 = 2;
-        public int c2 = 4;
-        public int c3 = 6;
-        public void ab() {
-            A a = new A();
-            B b = new B();
+        public int field1;
+        public int field2;
+        public int field3;
+        public void ab(A a, B b ){
             a.a();
-            b.a();
-            b.a();
-            this.cc();
-            this.cc();
-            this.cc();
-            this.cc();
-            this.cc();
-            System.Console.Write(c1);
-            System.Console.Write(c2);
-            System.Console.Write(c3);
-            System.Console.Write(a.x);
-            System.Console.Write(a.y);
-            System.Console.Write(b.b1);
-            System.Console.Write(b.b1);
-            System.Console.Write(b.b2);
-            System.Console.Write(b.b2);
-            System.Console.Write(b.b3);
-            System.Console.Write(b.b3);
-            String cLocal = "test2";
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
-            cLocal.GetType();
+            b.a(a);
+            b.a(a);
+            method();
+            method();
+            method();
+            method();
+            method();
+
+            field1 = 1;
+            field2 = 2;
+            field3 = 3;
+
+            a.field1 = a.field2 + 4;
+
+            b.field1 = b.field2 + 1;
+            b.field2 = b.field3 + 1;
+            b.field3 = b.field1 + 1;
+
+            String text = "A text";
+            text.GetType();
+            text.IndexOf("a");
+            text.Substring(3);
+            text.Split(" ");
+            text.Contains(" ");
+            text.GetEnumerator();
+            text.GetHashCode(0);
+            text.GetTypeCode();
+            text.Split(" ");
+            text.Equals("a");
         }
 
-        public void cc() {}
+        public void method() {}
     }
 }
