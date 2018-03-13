@@ -22,7 +22,7 @@ namespace feature_envy_dotnet
         }
 
         public int b(A a, int g) {
-            int x = a.a() + a.a();
+            int x = this.a(a) + this.a(a);
             int y = field1;
             int z = field2;
             int w = field3;
